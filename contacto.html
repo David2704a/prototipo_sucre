@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sucre Emprende</title>
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header consistente -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="branding">
+                    <img src="escudo_sucre.png" alt="Logo Sucre" class="logo">
+                    <div class="branding-text">
+                        <h1>Sucre Emprende</h1>
+                        <p>Municipio de Sucre, Cauca</p>
+                    </div>
+                </div>
+
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="productos.html"><i class="fas fa-store"></i> Productos</a></li>
+                        <li><a href="emprendedores.html"><i class="fas fa-users"></i> Emprendedores</a></li>
+                        <li><a href="registrate.html"><i class="fas fa-file-signature"></i> Regístrate</a></li>
+                        <li class="active"><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    </ul>
+                    <button class="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section para contacto -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="contact-hero-content">
+                    <h2>Estamos aquí para ayudarte</h2>
+                    <p class="contact-hero-text">Contáctanos para resolver tus dudas, recibir asesoría o enviar tus
+                        sugerencias</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenido de contacto -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Formulario de contacto -->
+                    <div class="contact-form-container">
+                        <div class="contact-form-header">
+                            <h3><i class="fas fa-paper-plane"></i> Envíanos un mensaje</h3>
+                            <p>Completa el formulario y nos pondremos en contacto contigo</p>
+                        </div>
+
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Nombre completo*</label>
+                                <input type="text" id="contact-name" required>
+                                <span class="form-hint">Ej: Juan Pérez García</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-email">Correo electrónico*</label>
+                                <input type="email" id="contact-email" required>
+                                <span class="form-hint">Ej: ejemplo@correo.com</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-phone">Teléfono (opcional)</label>
+                                <input type="tel" id="contact-phone">
+                                <span class="form-hint">Incluye código de área</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-subject">Asunto*</label>
+                                <select id="contact-subject" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="consulta">Consulta general</option>
+                                    <option value="soporte">Soporte técnico</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="prensa">Prensa y comunicación</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message">Mensaje*</label>
+                                <textarea id="contact-message" rows="6" required></textarea>
+                                <span class="form-hint">Describe tu consulta con detalle</span>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane"></i> Enviar mensaje
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Información de contacto -->
+                    <div class="contact-info-container">
+                        <div class="contact-info-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Ubicación</h3>
+                            <div class="contact-info-item">
+                                <p>Alcaldía Municipal de Sucre, Cauca<br>
+                                    Sucre, Cauca - Colombia</p>
+                            </div>
+                            <div class="contact-map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.7362524861073!2d-76.92694872403247!3d2.039180497875581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2fb93177c9795b%3A0xd1f92e9be107439!2sAlcald%C3%ADa%20de%20Sucre%2C%20Cauca%2C%20Colombia!5e0!3m2!1ses!2sco!4v1717336312312!5m2!1ses!2sco"
+                                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-info-section">
+                            <h3><i class="fas fa-address-book"></i> Medios de contacto</h3>
+                            <div class="contact-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <p>emprendimiento@sucre-cauca.gov.co</p>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <p>+57 (2) 123 4567</p>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <p>+57 321 456 7890</p>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <i class="fas fa-clock"></i>
+                                <p>Lunes a Viernes: 8:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-section">
+                            <h3><i class="fas fa-share-alt"></i> Redes sociales</h3>
+                            <div class="contact-social-links">
+                                <a href="https://web.facebook.com/AlcaldiaMunicipaldeSucreCauca20242027/?_rdc=1&_rdr"
+                                    target="_blank" class="social-link facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="#" class="social-link twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="#" class="social-link youtube">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de preguntas frecuentes -->
+        <section class="contact-faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Preguntas frecuentes</h2>
+                    <p>Resuelve tus dudas consultando nuestras preguntas frecuentes</p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Cómo puedo registrar mi emprendimiento?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Para registrar tu emprendimiento, dirígete a la sección de <a
+                                    href="registrate.html">Registro</a> y completa el formulario con toda la información
+                                requerida. Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo en un
+                                plazo máximo de 3 días hábiles.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Qué tipo de emprendimientos pueden registrarse?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Aceptamos emprendimientos de diversos sectores: agropecuario, alimentos procesados,
+                                artesanías, cosmética natural, servicios y comercio. Todos deben estar ubicados en el
+                                municipio de Sucre, Cauca.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Hay algún costo por registrarse en la plataforma?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No, el registro y uso de la plataforma es completamente gratuito para todos los
+                                emprendedores del municipio. Es un servicio proporcionado por la Alcaldía de Sucre para
+                                fomentar el desarrollo económico local.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Cómo puedo participar en las ferias locales?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Todos los emprendedores registrados recibirán por correo electrónico las convocatorias
+                                para participar en las ferias locales. También puedes estar atento a nuestras redes
+                                sociales donde publicamos todas las oportunidades.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-more">
+                    <p>¿No encontraste respuesta a tu pregunta?</p>
+                    <a href="#contact-form" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer consistente -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="escudo_sucre.png" alt="Logo Sucre" class="footer-logo">
+                    <p class="footer-motto">"Por un Sucre Grande, apoyamos lo nuestro"</p>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/AlcaldiaMunicipaldeSucreCauca20242027/?_rdc=1&_rdr"
+                            target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-whatsapp"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="productos.html"><i class="fas fa-chevron-right"></i> Productos</a></li>
+                        <li><a href="emprendedores.html"><i class="fas fa-chevron-right"></i> Emprendedores</a></li>
+                        <li><a href="registrate.html"><i class="fas fa-chevron-right"></i> Regístrate</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Alcaldía Municipal, Sucre, Cauca</li>
+                        <li><i class="fas fa-phone-alt"></i> +57 3146069560</li>
+                        <li><i class="fas fa-envelope"></i> alcaldia@sucre-cauca.gov.co</li>
+                        <li><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <!-- &copy; 2025 Municipio de Sucre, Cauca. Todos los derechos reservados. -->
+                </div>
+                <div class="legal-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contacto.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

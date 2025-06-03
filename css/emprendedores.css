@@ -1,0 +1,415 @@
+/* Hero específico para emprendedores */
+.entrepreneur-hero {
+    background: linear-gradient(var(--primary-color), var(--primary-color)), 
+                url('../img/emprendedores-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 120px 0 80px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.entrepreneur-hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.entrepreneur-hero-text {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+/* Filtros de emprendedores */
+.entrepreneur-filters {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.entrepreneur-filters-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.entrepreneur-filter-group h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.entrepreneur-filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.entrepreneur-filter {
+    margin-bottom: 15px;
+}
+
+.entrepreneur-filter label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.entrepreneur-filter-select, .entrepreneur-sort-select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+}
+
+.entrepreneur-filter-select:focus, .entrepreneur-sort-select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.2);
+}
+
+.entrepreneur-search-box {
+    position: relative;
+    display: flex;
+}
+
+.entrepreneur-search-box input {
+    width: 100%;
+    padding: 12px 15px;
+    padding-right: 45px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    font-size: 1rem;
+}
+
+.entrepreneur-search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.entrepreneur-search-btn:hover {
+    color: var(--primary-color);
+}
+
+.entrepreneur-filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Resultados de emprendedores */
+.entrepreneur-results {
+    padding: 60px 0;
+}
+
+.entrepreneur-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.entrepreneur-results-header h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.entrepreneur-results-header h3 span {
+    color: #0066cc;
+    font-weight: 700;
+}
+
+.entrepreneur-sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.entrepreneur-sort label {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+/* Grid de emprendedores */
+.entrepreneur-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.entrepreneur-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+}
+
+.entrepreneur-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.entrepreneur-img-container {
+    height: 250px;
+    overflow: hidden;
+}
+
+.entrepreneur-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.entrepreneur-card:hover .entrepreneur-img {
+    transform: scale(1.05);
+}
+
+.entrepreneur-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.entrepreneur-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.entrepreneur-name {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.entrepreneur-type {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.entrepreneur-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.entrepreneur-location, .entrepreneur-experience {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #6c757d;
+}
+
+.entrepreneur-desc {
+    color: #6c757d;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.entrepreneur-products h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.product-list {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.product-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #6c757d;
+}
+
+.product-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.entrepreneur-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* Paginación */
+.entrepreneur-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.entrepreneur-pag-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    color: #333333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 5px;
+}
+
+.entrepreneur-pag-btn:hover:not(.disabled):not(.active) {
+    background-color: #f8f9fa;
+}
+
+.entrepreneur-pag-btn.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+.entrepreneur-pag-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.entrepreneur-pages {
+    display: flex;
+    gap: 5px;
+}
+
+/* Banner promocional */
+.entrepreneur-promo {
+    background: linear-gradient(var(--primary-color), var(--primary-color)), 
+                url('../img/emprendedores-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.entrepreneur-promo-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.entrepreneur-promo-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .entrepreneur-hero-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .entrepreneur-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .entrepreneur-filters-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .entrepreneur-filter-actions {
+        justify-content: center;
+    }
+    
+    .entrepreneur-results-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .entrepreneur-sort {
+        width: 100%;
+    }
+    
+    .entrepreneur-sort-select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .entrepreneur-filters-container {
+        padding: 20px;
+    }
+    
+    .entrepreneur-hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .entrepreneur-promo-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .entrepreneur-promo-content p {
+        font-size: 1rem;
+    }
+    
+    .entrepreneur-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .entrepreneur-img-container {
+        height: 200px;
+    }
+}

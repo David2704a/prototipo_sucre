@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprendedores - Sucre Emprende</title>
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/emprendedores.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header consistente -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="branding">
+                    <img src="escudo_sucre.png" alt="Logo Sucre" class="logo">
+                    <div class="branding-text">
+                        <h1>Sucre Emprende</h1>
+                        <p>Municipio de Sucre, Cauca</p>
+                    </div>
+                </div>
+
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="productos.html"><i class="fas fa-store"></i> Productos</a></li>
+                        <li class="active"><a href="emprendedores.html"><i class="fas fa-users"></i> Emprendedores</a>
+                        </li>
+                        <li><a href="registrate.html"><i class="fas fa-file-signature"></i> Regístrate</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    </ul>
+                    <button class="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section específica -->
+        <section class="entrepreneur-hero">
+            <div class="container">
+                <div class="entrepreneur-hero-content">
+                    <h2>Conoce a nuestros emprendedores</h2>
+                    <p class="entrepreneur-hero-text">Descubre las historias y proyectos de los talentosos emprendedores
+                        sucreños.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros de emprendedores -->
+        <section class="entrepreneur-filters">
+            <div class="container">
+                <div class="entrepreneur-filters-container">
+                    <div class="entrepreneur-filter-group">
+                        <h3>Buscar emprendedores</h3>
+                        <div class="entrepreneur-filters-grid">
+                            <!-- Filtro por tipo -->
+                            <div class="entrepreneur-filter">
+                                <label for="entrepreneur-type"><i class="fas fa-tag"></i> Tipo de emprendimiento</label>
+                                <select id="entrepreneur-type" class="entrepreneur-filter-select">
+                                    <option value="all">Todos los tipos</option>
+                                    <option value="agro">Agropecuario</option>
+                                    <option value="food">Alimentos</option>
+                                    <option value="handcraft">Artesanías</option>
+                                    <option value="services">Servicios</option>
+                                    <option value="commerce">Comercio</option>
+                                </select>
+                            </div>
+
+                            <!-- Filtro por ubicación -->
+                            <div class="entrepreneur-filter">
+                                <label for="entrepreneur-location"><i class="fas fa-map-marker-alt"></i>
+                                    Ubicación</label>
+                                <select id="entrepreneur-location" class="entrepreneur-filter-select">
+                                    <option value="all">Todas las ubicaciones</option>
+                                    <option value="urban">Zona urbana</option>
+                                    <option value="rural">Zona rural</option>
+                                    <option value="palmar">Vereda El Palmar</option>
+                                    <option value="esperanza">Vereda La Esperanza</option>
+                                </select>
+                            </div>
+
+                            <!-- Barra de búsqueda -->
+                            <div class="entrepreneur-filter entrepreneur-search">
+                                <label for="entrepreneur-search"><i class="fas fa-search"></i> Buscar</label>
+                                <div class="entrepreneur-search-box">
+                                    <input type="text" id="entrepreneur-search" placeholder="Nombre del emprendedor...">
+                                    <button class="entrepreneur-search-btn"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="entrepreneur-filter-actions">
+                        <button class="btn btn-outline" id="reset-entrepreneur-filters">
+                            <i class="fas fa-undo"></i> Limpiar
+                        </button>
+                        <button class="btn btn-primary" id="apply-entrepreneur-filters">
+                            <i class="fas fa-filter"></i> Aplicar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultados de emprendedores -->
+        <section class="entrepreneur-results">
+            <div class="container">
+                <div class="entrepreneur-results-header">
+                    <h3><span id="entrepreneurs-count">15</span> emprendedores encontrados</h3>
+                    <div class="entrepreneur-sort">
+                        <label for="entrepreneur-sort"><i class="fas fa-sort"></i> Ordenar:</label>
+                        <select id="entrepreneur-sort" class="entrepreneur-sort-select">
+                            <option value="relevant">Más relevantes</option>
+                            <option value="name-asc">Nombre (A-Z)</option>
+                            <option value="name-desc">Nombre (Z-A)</option>
+                            <option value="recent">Más recientes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="entrepreneur-grid" id="entrepreneurs-container">
+                    <!-- Ejemplo de emprendedor -->
+                    <article class="entrepreneur-card">
+                        <div class="entrepreneur-img-container">
+                            <img src="https://via.placeholder.com/400x400?text=Emprendedor" alt="María Gómez"
+                                class="entrepreneur-img">
+                        </div>
+                        <div class="entrepreneur-info">
+                            <div class="entrepreneur-header">
+                                <h3 class="entrepreneur-name">María Gómez</h3>
+                                <span class="entrepreneur-type">Artesanías</span>
+                            </div>
+                            <div class="entrepreneur-meta">
+                                <span class="entrepreneur-location"><i class="fas fa-map-marker-alt"></i> Vereda El
+                                    Palmar</span>
+                                <span class="entrepreneur-experience"><i class="fas fa-star"></i> 5 años de
+                                    experiencia</span>
+                            </div>
+                            <p class="entrepreneur-desc">Elaboración de canastos y artesanías en bejuco con técnicas
+                                tradicionales transmitidas por generaciones.</p>
+                            <div class="entrepreneur-products">
+                                <h4>Productos destacados:</h4>
+                                <ul class="product-list">
+                                    <li>Canastos tejidos a mano</li>
+                                    <li>Sombreros tradicionales</li>
+                                    <li>Decoraciones para el hogar</li>
+                                </ul>
+                            </div>
+                            <div class="entrepreneur-actions">
+                                <a href="#" class="btn btn-small entrepreneur-detail-btn">
+                                    <i class="fas fa-eye"></i> Ver perfil
+                                </a>
+                                <a href="#" class="btn btn-small btn-outline entrepreneur-contact-btn">
+                                    <i class="fas fa-envelope"></i> Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Más emprendedores se cargarán dinámicamente -->
+                </div>
+
+                <div class="entrepreneur-pagination">
+                    <button class="entrepreneur-pag-btn disabled">
+                        <i class="fas fa-chevron-left"></i> Anterior
+                    </button>
+                    <div class="entrepreneur-pages">
+                        <button class="entrepreneur-pag-btn active">1</button>
+                        <button class="entrepreneur-pag-btn">2</button>
+                        <button class="entrepreneur-pag-btn">3</button>
+                    </div>
+                    <button class="entrepreneur-pag-btn">
+                        Siguiente <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner promocional -->
+        <section class="entrepreneur-promo">
+            <div class="container">
+                <div class="entrepreneur-promo-content">
+                    <h3>¿Tienes un emprendimiento?</h3>
+                    <p>Únete a nuestra plataforma y haz crecer tu negocio</p>
+                    <a href="registrate.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-file-signature"></i> Regístrate ahora
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer consistente -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="escudo_sucre.png" alt="Logo Sucre" class="footer-logo">
+                    <p class="footer-motto">"Por un Sucre Grande, apoyamos lo nuestro"</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="productos.html"><i class="fas fa-chevron-right"></i> Productos</a></li>
+                        <li><a href="emprendedores.html"><i class="fas fa-chevron-right"></i> Emprendedores</a></li>
+                        <li><a href="registrate.html"><i class="fas fa-chevron-right"></i> Regístrate</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Alcaldía Municipal, Sucre, Cauca</li>
+                        <li><i class="fas fa-phone-alt"></i> +57 3146069560</li>
+                        <li><i class="fas fa-envelope"></i> alcaldia@sucre-cauca.gov.co</li>
+                        <li><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 Municipio de Sucre, Cauca. Todos los derechos reservados.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/emprendedores.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

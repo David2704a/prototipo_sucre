@@ -1,0 +1,394 @@
+/* Hero específico para productos */
+.product-hero {
+    background: linear-gradient(var(--primary-color), var(--primary-color)),
+        url('https://via.placeholder.com/1920x600?text=Productos+Sucre');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 120px 0 80px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.product-hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.product-hero-content h2 span {
+    display: block;
+    color: var(--accent-color);
+    font-size: 2.2rem;
+}
+
+.product-hero-text {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+/* Filtros de productos */
+.product-filters {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.product-filters-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.product-filter-group h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.product-filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.product-filter {
+    margin-bottom: 15px;
+}
+
+.product-filter label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-filter-select,
+.product-sort-select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+}
+
+.product-filter-select:focus,
+.product-sort-select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.2);
+}
+
+.product-search-box {
+    position: relative;
+    display: flex;
+}
+
+.product-search-box input {
+    width: 100%;
+    padding: 12px 15px;
+    padding-right: 45px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    font-size: 1rem;
+}
+
+.product-search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-search-btn:hover {
+    color: var(--primary-color);
+}
+
+.product-filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Resultados de productos */
+.product-results {
+    padding: 60px 0;
+}
+
+.product-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-results-header h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.product-results-header h3 span {
+    color: #0066cc;
+    font-weight: 700;
+}
+
+.product-sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-sort label {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+/* Grid de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.product-img-container {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    /* Añadido para posicionamiento absoluto de la imagen */
+    display: flex;
+    /* Usamos flex para centrar la imagen */
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+    background-color: #f8f9fa;
+    /* Color de fondo por si la imagen no carga */
+}
+
+.product-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    /* color: var(--primary-color); */
+    color: var(--primary-color);
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.product-price {
+    font-weight: 700;
+    color: #0066cc;
+}
+
+.product-seller {
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-desc {
+    color: #6c757d;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Paginación */
+.product-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.product-pag-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    color: #333333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 5px;
+}
+
+.product-pag-btn:hover:not(.disabled):not(.active) {
+    background-color: #f8f9fa;
+}
+
+.product-pag-btn.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+.product-pag-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.product-pages {
+    display: flex;
+    gap: 5px;
+}
+
+/* Banner promocional */
+.product-promo {
+    background: linear-gradient(var(--primary-color), var(--primary-color)),
+        url('https://via.placeholder.com/1920x600?text=Emprendedores+Sucre');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.product-promo-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-promo-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-filters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-filter-actions {
+        justify-content: center;
+    }
+
+    .product-results-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-sort {
+        width: 100%;
+    }
+
+    .product-sort-select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-filters-container {
+        padding: 20px;
+    }
+
+    .product-hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .product-hero-content h2 span {
+        font-size: 1.8rem;
+    }
+
+    .product-promo-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .product-promo-content p {
+        font-size: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

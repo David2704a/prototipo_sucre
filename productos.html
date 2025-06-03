@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Locales - Sucre Emprende</title>
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header (igual que index) -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="branding">
+                    <img src="escudo_sucre.png" alt="Logo Sucre" class="logo">
+                    <div class="branding-text">
+                        <h1>Sucre Emprende</h1>
+                        <p>Municipio de Sucre, Cauca</p>
+                    </div>
+                </div>
+
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li class="active"><a href="productos.html"><i class="fas fa-store"></i> Productos</a></li>
+                        <li><a href="emprendedores.html"><i class="fas fa-users"></i> Emprendedores</a></li>
+                        <li><a href="registrate.html"><i class="fas fa-file-signature"></i> Regístrate</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    </ul>
+                    <button class="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section específico para productos -->
+        <section class="product-hero">
+            <div class="container">
+                <div class="product-hero-content">
+                    <h2>Productos Locales <span>Calidad Garantizada</span></h2>
+                    <p class="product-hero-text">Descubre la variedad de productos elaborados por nuestros emprendedores
+                        sucreños.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros avanzados -->
+        <section class="product-filters">
+            <div class="container">
+                <div class="product-filters-container">
+                    <div class="product-filter-group">
+                        <h3>Filtrar Productos</h3>
+                        <div class="product-filters-grid">
+                            <!-- Filtro por categoría -->
+                            <div class="product-filter">
+                                <label for="product-category"><i class="fas fa-tags"></i> Categoría</label>
+                                <select id="product-category" class="product-filter-select">
+                                    <option value="all">Todas las categorías</option>
+                                    <option value="food">Alimentos</option>
+                                    <option value="drinks">Bebidas</option>
+                                    <option value="handcrafts">Artesanías</option>
+                                </select>
+                            </div>
+
+                            <!-- Barra de búsqueda -->
+                            <div class="product-filter product-search">
+                                <label for="product-search"><i class="fas fa-search"></i> Buscar</label>
+                                <div class="product-search-box">
+                                    <input type="text" id="product-search" placeholder="Nombre del producto...">
+                                    <button class="product-search-btn"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-filter-actions">
+                        <button class="btn btn-outline" id="reset-product-filters">
+                            <i class="fas fa-undo"></i> Limpiar
+                        </button>
+                        <button class="btn btn-primary" id="apply-product-filters">
+                            <i class="fas fa-filter"></i> Aplicar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultados de productos -->
+        <section class="product-results">
+            <div class="container">
+                <div class="product-results-header">
+                    <h3><span id="products-count">12</span> productos encontrados</h3>
+                    <div class="product-sort">
+                        <label for="product-sort"><i class="fas fa-sort"></i> Ordenar:</label>
+                        <select id="product-sort" class="product-sort-select">
+                            <option value="relevant">Más relevantes</option>
+                            <option value="price-asc">Precio: Menor a mayor</option>
+                            <option value="price-desc">Precio: Mayor a menor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid" id="products-container">
+                    <!-- Ejemplo de producto -->
+                    <article class="product-card">
+                        <div class="product-badge">Nuevo</div>
+                        <div class="product-img-container">
+                            <img src="cafe.jpg" alt="Café Orgánico" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Café Orgánico</h3>
+                            <div class="product-meta">
+                                <span class="product-price">$15,000</span>
+                                <span class="product-seller"><i class="fas fa-user"></i> Doña Rosa</span>
+                            </div>
+                            <p class="product-desc">Café cultivado en las montañas de Sucre, tostado artesanalmente.</p>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-small product-detail-btn">
+                                    <i class="fas fa-eye"></i> Ver más
+                                </a>
+                                <a href="#" class="btn btn-small btn-outline product-buy-btn">
+                                    <i class="fas fa-shopping-cart"></i> Comprar
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Más productos se cargarán dinámicamente -->
+                </div>
+
+                <div class="product-pagination">
+                    <button class="product-pag-btn disabled">
+                        <i class="fas fa-chevron-left"></i> Anterior
+                    </button>
+                    <div class="product-pages">
+                        <button class="product-pag-btn active">1</button>
+                        <button class="product-pag-btn">2</button>
+                        <button class="product-pag-btn">3</button>
+                    </div>
+                    <button class="product-pag-btn">
+                        Siguiente <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner promocional -->
+        <section class="product-promo">
+            <div class="container">
+                <div class="product-promo-content">
+                    <h3>¿Eres emprendedor?</h3>
+                    <p>Regístrate y vende tus productos en nuestra plataforma</p>
+                    <a href="registrate.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-file-signature"></i> Regístrate ahora
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Mejorado -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="escudo_sucre.png" alt="Logo Sucre" class="footer-logo">
+                    <p class="footer-motto">"Por un Sucre Grande, apoyamos lo nuestro"</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="productos.html"><i class="fas fa-chevron-right"></i> Productos</a></li>
+                        <li><a href="emprendedores.html"><i class="fas fa-chevron-right"></i> Emprendedores</a></li>
+                        <li><a href="registrate.html"><i class="fas fa-chevron-right"></i> Regístrate</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Alcaldía Municipal, Sucre, Cauca</li>
+                        <li><i class="fas fa-phone-alt"></i> +57 3146069560</li>
+                        <li><i class="fas fa-envelope"></i> alcaldia@sucre-cauca.gov.co</li>
+                        <li><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 Municipio de Sucre, Cauca. Todos los derechos reservados.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/productos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

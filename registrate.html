@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regístrate - Sucre Emprende</title>
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header consistente -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="branding">
+                    <img src="escudo_sucre.png" alt="Logo Sucre" class="logo">
+                    <div class="branding-text">
+                        <h1>Sucre Emprende</h1>
+                        <p>Municipio de Sucre, Cauca</p>
+                    </div>
+                </div>
+
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="productos.html"><i class="fas fa-store"></i> Productos</a></li>
+                        <li><a href="emprendedores.html"><i class="fas fa-users"></i> Emprendedores</a></li>
+                        <li class="active"><a href="registrate.html"><i class="fas fa-file-signature"></i>
+                                Regístrate</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    </ul>
+                    <button class="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section para registro -->
+        <section class="register-hero">
+            <div class="container">
+                <div class="register-hero-content">
+                    <h2>Únete a nuestra comunidad de emprendedores</h2>
+                    <p class="register-hero-text">Registra tu emprendimiento y accede a nuevas oportunidades de
+                        crecimiento</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de registro -->
+        <section class="register-form-section">
+            <div class="container">
+                <div class="register-form-container">
+                    <div class="register-form-header">
+                        <h2>Formulario de Registro</h2>
+                        <p>Completa toda la información solicitada para unirte a nuestra plataforma</p>
+                    </div>
+
+                    <form id="register-form" class="register-form">
+                        <!-- Información personal -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Información Personal</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="register-fullname">Nombre completo*</label>
+                                    <input type="text" id="register-fullname" required>
+                                    <span class="form-hint">Ej: Juan Pérez García</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="register-phone">Teléfono / WhatsApp*</label>
+                                    <input type="tel" id="register-phone" required>
+                                    <span class="form-hint">Incluye código de área</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="register-email">Correo electrónico*</label>
+                                    <input type="email" id="register-email" required>
+                                    <span class="form-hint">Ej: ejemplo@correo.com</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Información del emprendimiento -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-store"></i> Información del Emprendimiento</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="register-business">Nombre del emprendimiento*</label>
+                                    <input type="text" id="register-business" required>
+                                    <span class="form-hint">Nombre comercial</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="register-business-type">Tipo de emprendimiento*</label>
+                                    <select id="register-business-type" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="agro">Agropecuario</option>
+                                        <option value="food">Alimentos</option>
+                                        <option value="handcraft">Artesanías</option>
+                                        <option value="cosmetic">Cosmética natural</option>
+                                        <option value="service">Servicios</option>
+                                        <option value="commerce">Comercio</option>
+                                        <option value="other">Otros</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="register-location">Ubicación (vereda/barrio)*</label>
+                                    <input type="text" id="register-location" required>
+                                    <span class="form-hint">Ej: Vereda El Palmar</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-description">Descripción del emprendimiento*</label>
+                                <textarea id="register-description" rows="4" required></textarea>
+                                <span class="form-hint">Describe tus productos/servicios, historia, proceso de
+                                    elaboración, etc.</span>
+                            </div>
+                        </div>
+
+                        <!-- Galería de productos -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-images"></i> Galería de Productos</h3>
+                            <div class="form-group">
+                                <label for="register-photos">Fotos de tus productos (máx. 5 imágenes)</label>
+                                <div class="file-upload-container">
+                                    <input type="file" id="register-photos" multiple accept="image/*">
+                                    <label for="register-photos" class="file-upload-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Seleccionar archivos</span>
+                                    </label>
+                                    <div id="file-upload-feedback" class="file-upload-feedback"></div>
+                                </div>
+                                <span class="form-hint">Formatos aceptados: JPG, PNG. Tamaño máximo por archivo:
+                                    2MB</span>
+                            </div>
+
+                            <div class="image-preview-container" id="image-preview-container">
+                                <!-- Las previsualizaciones de imágenes aparecerán aquí -->
+                            </div>
+                        </div>
+
+                        <!-- Términos y condiciones -->
+                        <div class="form-section">
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="register-terms" required>
+                                <label for="register-terms">Acepto los <a href="#" class="terms-link">Términos y
+                                        Condiciones</a> y la <a href="#" class="terms-link">Política de
+                                        Privacidad</a>*</label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="register-newsletter">
+                                <label for="register-newsletter">Deseo recibir información sobre capacitaciones y
+                                    oportunidades para emprendedores</label>
+                            </div>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane"></i> Enviar solicitud
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="register-notice">
+                        <div class="notice-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="notice-content">
+                            <h4>Proceso de verificación</h4>
+                            <p>Una vez enviado el formulario, nuestro equipo revisará tu información y se pondrá en
+                                contacto contigo en un plazo máximo de 3 días hábiles para confirmar tu registro en la
+                                plataforma.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer consistente -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <img src="escudo_sucre.png" alt="Logo Sucre" class="footer-logo">
+                    <p class="footer-motto">"Por un Sucre Grande, apoyamos lo nuestro"</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="productos.html"><i class="fas fa-chevron-right"></i> Productos</a></li>
+                        <li><a href="emprendedores.html"><i class="fas fa-chevron-right"></i> Emprendedores</a></li>
+                        <li><a href="registrate.html"><i class="fas fa-chevron-right"></i> Regístrate</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Alcaldía Municipal, Sucre, Cauca</li>
+                        <li><i class="fas fa-phone-alt"></i> +57 3146069560</li>
+                        <li><i class="fas fa-envelope"></i> alcaldia@sucre-cauca.gov.co</li>
+                        <li><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 Municipio de Sucre, Cauca. Todos los derechos reservados.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/registro.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
