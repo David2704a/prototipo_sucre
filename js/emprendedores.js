@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Datos de ejemplo
     const entrepreneursData = [
         {
             id: 1,
@@ -31,10 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
             ],
             joined: "2020-05-10"
         },
-        // ... más emprendedores ...
     ];
 
-    // Elementos del DOM
     const entrepreneursContainer = document.getElementById('entrepreneurs-container');
     const typeFilter = document.getElementById('entrepreneur-type');
     const locationFilter = document.getElementById('entrepreneur-location');
@@ -44,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const resetFiltersBtn = document.getElementById('reset-entrepreneur-filters');
     const entrepreneursCount = document.getElementById('entrepreneurs-count');
 
-    // Mostrar emprendedores
     function displayEntrepreneurs(entrepreneurs) {
         entrepreneursContainer.innerHTML = '';
         
@@ -102,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
         entrepreneursCount.textContent = entrepreneurs.length;
     }
 
-    // Obtener nombre del tipo
     function getTypeName(type) {
         const types = {
             'agro': 'Agropecuario',
@@ -114,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return types[type] || type;
     }
 
-    // Obtener nombre de la ubicación
     function getLocationName(location) {
         const locations = {
             'urban': 'Zona urbana',
@@ -125,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return locations[location] || location;
     }
 
-    // Filtrar y ordenar emprendedores
     function filterEntrepreneurs() {
         const type = typeFilter.value;
         const location = locationFilter.value;
@@ -134,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let filteredEntrepreneurs = [...entrepreneursData];
         
-        // Aplicar filtros
         if (type !== 'all') {
             filteredEntrepreneurs = filteredEntrepreneurs.filter(e => e.type === type);
         }
@@ -151,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
             );
         }
         
-        // Ordenar
         switch (sortOption) {
             case 'name-asc':
                 filteredEntrepreneurs.sort((a, b) => a.name.localeCompare(b.name));
@@ -163,14 +154,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 filteredEntrepreneurs.sort((a, b) => new Date(b.joined) - new Date(a.joined));
                 break;
             default:
-                // Por defecto (más relevantes - experiencia)
                 filteredEntrepreneurs.sort((a, b) => b.experience - a.experience);
         }
         
         displayEntrepreneurs(filteredEntrepreneurs);
     }
 
-    // Resetear filtros
     function resetFilters() {
         typeFilter.value = 'all';
         locationFilter.value = 'all';
@@ -179,12 +168,10 @@ document.addEventListener('DOMContentLoaded', function() {
         filterEntrepreneurs();
     }
 
-    // Event listeners
     applyFiltersBtn.addEventListener('click', filterEntrepreneurs);
     resetFiltersBtn.addEventListener('click', resetFilters);
     searchInput.addEventListener('keyup', (e) => e.key === 'Enter' && filterEntrepreneurs());
     sortSelect.addEventListener('change', filterEntrepreneurs);
     
-    // Mostrar todos los emprendedores al cargar
     displayEntrepreneurs(entrepreneursData);
 });

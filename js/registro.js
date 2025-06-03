@@ -1,24 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Elementos del formulario
     const registerForm = document.getElementById('register-form');
     const fileInput = document.getElementById('register-photos');
     const fileFeedback = document.getElementById('file-upload-feedback');
     const imagePreviewContainer = document.getElementById('image-preview-container');
     
-    // Previsualización de imágenes
     fileInput.addEventListener('change', function(e) {
         const files = e.target.files;
         fileFeedback.textContent = `${files.length} archivo(s) seleccionado(s)`;
         imagePreviewContainer.innerHTML = '';
         
-        // Validar número de archivos
         if (files.length > 5) {
             fileFeedback.innerHTML = '<span style="color: #dc3545;">Solo puedes subir un máximo de 5 imágenes</span>';
             fileInput.value = '';
             return;
         }
         
-        // Validar tamaño y tipo de archivos
         for (let i = 0; i < files.length; i++) {
             const file = files[i];
             
@@ -34,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Crear previsualización
             const reader = new FileReader();
             
             reader.onload = function(e) {
@@ -50,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 imagePreviewContainer.appendChild(preview);
                 
-                // Eliminar imagen
                 preview.querySelector('.image-preview-remove').addEventListener('click', function() {
                     removeImageFromFileList(this.getAttribute('data-index'));
                     preview.remove();
@@ -62,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Función para eliminar imagen del FileList
     function removeImageFromFileList(index) {
         const dt = new DataTransfer();
         const files = fileInput.files;
@@ -76,11 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
         fileInput.files = dt.files;
     }
     
-    // Validación del formulario
     registerForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Validar campos requeridos
         let isValid = true;
         const requiredFields = registerForm.querySelectorAll('[required]');
         
@@ -93,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Validar términos y condiciones
         const termsCheckbox = document.getElementById('register-terms');
         if (!termsCheckbox.checked) {
             termsCheckbox.nextElementSibling.style.color = '#dc3545';
@@ -103,18 +93,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (isValid) {
-            // Simular envío del formulario
             showFormSuccess();
         } else {
-            // Mostrar mensaje de error
             showFormError('Por favor completa todos los campos requeridos');
         }
     });
     
-    // Mostrar mensaje de éxito
     function showFormSuccess() {
-        // Aquí normalmente harías el envío real del formulario
-        // Por ahora mostramos un mensaje de éxito
         const successMessage = document.createElement('div');
         successMessage.className = 'form-success-message';
         successMessage.innerHTML = `
@@ -133,11 +118,9 @@ document.addEventListener('DOMContentLoaded', function() {
         registerForm.innerHTML = '';
         registerForm.appendChild(successMessage);
         
-        // Desplazarse al formulario
         registerForm.scrollIntoView({ behavior: 'smooth' });
     }
     
-    // Mostrar mensaje de error
     function showFormError(message) {
         const errorElement = document.createElement('div');
         errorElement.className = 'form-error-message';
@@ -146,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <span>${message}</span>
         `;
         
-        // Eliminar mensaje de error anterior si existe
         const existingError = registerForm.querySelector('.form-error-message');
         if (existingError) {
             existingError.remove();
@@ -154,11 +136,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         registerForm.insertBefore(errorElement, registerForm.firstChild);
         
-        // Desplazarse al mensaje de error
         errorElement.scrollIntoView({ behavior: 'smooth' });
     }
     
-    // Resetear estilos al cambiar campos
     const formInputs = registerForm.querySelectorAll('input, select, textarea');
     formInputs.forEach(input => {
         input.addEventListener('input', function() {

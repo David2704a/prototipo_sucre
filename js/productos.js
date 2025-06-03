@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Datos de ejemplo
     const productsData = [
         {
             id: 1,
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ];
 
-    // Elementos del DOM
     const productsContainer = document.getElementById('products-container');
     const categoryFilter = document.getElementById('product-category');
     const searchInput = document.getElementById('product-search');
@@ -35,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const resetFiltersBtn = document.getElementById('reset-product-filters');
     const productsCount = document.getElementById('products-count');
 
-    // Mostrar productos
     function displayProducts(products) {
         productsContainer.innerHTML = '';
 
@@ -86,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
         productsCount.textContent = products.length;
     }
 
-    // Filtrar y ordenar productos
     function filterProducts() {
         const category = categoryFilter.value;
         const searchTerm = searchInput.value.toLowerCase();
@@ -94,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let filteredProducts = [...productsData];
 
-        // Aplicar filtros
         if (category !== 'all') {
             filteredProducts = filteredProducts.filter(p => p.category === category);
         }
@@ -106,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
             );
         }
 
-        // Ordenar
         switch (sortOption) {
             case 'price-asc':
                 filteredProducts.sort((a, b) => a.price - b.price);
@@ -115,14 +109,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 filteredProducts.sort((a, b) => b.price - a.price);
                 break;
             default:
-                // Por defecto (más relevantes)
                 filteredProducts.sort((a, b) => b.featured - a.featured);
         }
 
         displayProducts(filteredProducts);
     }
 
-    // Resetear filtros
     function resetFilters() {
         categoryFilter.value = 'all';
         searchInput.value = '';
@@ -130,12 +122,10 @@ document.addEventListener('DOMContentLoaded', function () {
         filterProducts();
     }
 
-    // Event listeners
     applyFiltersBtn.addEventListener('click', filterProducts);
     resetFiltersBtn.addEventListener('click', resetFilters);
     searchInput.addEventListener('keyup', (e) => e.key === 'Enter' && filterProducts());
     sortSelect.addEventListener('change', filterProducts);
 
-    // Mostrar todos los productos al cargar
     displayProducts(productsData);
 });
